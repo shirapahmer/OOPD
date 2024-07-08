@@ -84,11 +84,12 @@ public class Main {
         System.out.println("Choose from the following paper:\n" +
                 "ac: academic paper\n" +
                 "cn: contract\n" +
-                "pr: journal article\n" +
+                "jr: journal article\n" +
                 "bk: book");
-        // TODO: Add a Paper Factory and use it to create a Paper
         Paper paper = null;
         String choice="";
+        choice = scanner.nextLine();
+        paper = PaperFactory.createPaper(choice);
         while (!choice.equals("s")) {
             System.out.println("Choose from the following options:\n" +
                     "a: add element\n" +
@@ -111,7 +112,19 @@ public class Main {
                 "eq: equation\n" +
                 "d: diagram\n" +
                 "nt: note");
-        // TODO: Use a Paper-Element Factory to create a decorated Hamburger
-        return null;
-    }
+        String choice = scanner.nextLine();
+        if (choice.equals("tb")) {
+            System.out.println(new TableDecorator(paper).write());
+        }
+        else if (choice.equals("eq")) {
+            System.out.println(new EquationDecorator(paper).write());
+        }
+        else if (choice.equals("d")) {
+            System.out.println(new DiagramDecorator(paper).write());
+        }
+        else if (choice.equals("nt")) {
+            System.out.println(new NoteDecorator(paper).write());
+        }
+       return paper;
+   }
 }
