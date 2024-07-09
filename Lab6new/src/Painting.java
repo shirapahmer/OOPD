@@ -28,6 +28,9 @@ public class Painting {
             else if( element.getHabitat() == Habitat.AMPHIBIAN && (containingElement.getClass() == Lake.class || containingElement.getClass() == Island.class)){
                 ((Composite) containingElement).getElementsList().add(element);
             }
+            else {
+                System.out.println(containingElement.getName()+" cannot contain "+element.getName());
+            }
         }
     }
 

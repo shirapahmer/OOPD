@@ -59,6 +59,7 @@ public class Main {
                     for(Element e : root.elementList){
                         e.accept(shortPrintVisitor);
                     }
+                    shortPrintVisitor.printString();
                     break;
                 case "ta":
                     calcAreaVisitor calcAreaVisitor = new calcAreaVisitor();
@@ -113,18 +114,25 @@ public class Main {
                 "d: diagram\n" +
                 "nt: note");
         String choice = scanner.nextLine();
+        Paper p1;
         if (choice.equals("tb")) {
-            System.out.println(new TableDecorator(paper).write());
+            p1 = new TableDecorator(paper);
+            return p1;
         }
         else if (choice.equals("eq")) {
-            System.out.println(new EquationDecorator(paper).write());
+            p1 =new EquationDecorator(paper);
+            return p1;
         }
         else if (choice.equals("d")) {
-            System.out.println(new DiagramDecorator(paper).write());
+            p1 =new DiagramDecorator(paper);
+            return p1;
         }
         else if (choice.equals("nt")) {
-            System.out.println(new NoteDecorator(paper).write());
+            p1 = new NoteDecorator(paper);
+            return p1;
         }
-       return paper;
-   }
+        else {
+            return paper;
+        }
+    }
 }

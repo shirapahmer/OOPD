@@ -6,7 +6,7 @@ public class TableDecorator extends PaperDecorator{
         return super.write() + writeWithTableDecorator();
     }
     public String writeWithTableDecorator(){
-        return "Table";
+        return " Table";
     }
 
 }

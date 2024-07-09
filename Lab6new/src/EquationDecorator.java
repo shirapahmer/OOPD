@@ -6,6 +6,6 @@ public class EquationDecorator extends PaperDecorator {
         return super.write() + writeWithEquationDecorator();
     }
     public String writeWithEquationDecorator(){
-        return "Equation";
+        return " Equation";
     }
 }

@@ -1,41 +1,46 @@
 public class ShortPrintVisitor implements ElementsVisitor{
+    private String shortString;
     @Override
     public void visit(Flag flag) {
-        System.out.println(flag.getFullName());
+        shortString+= flag.getFullName()+ "\n";
     }
 
     @Override
     public void visit(Kid kid) {
-        System.out.println(kid.getFullName());
+        shortString += kid.getFullName() + "\n";
     }
 
     @Override
     public void visit(Lake lake) {
-        System.out.println(lake.getFullName());
+        shortString += lake.getFullName() + "\n";
     }
 
     @Override
     public void visit(Island island) {
-        System.out.println(island.getFullName());
+        shortString += island.getFullName() + "\n";
     }
 
     @Override
     public void visit(Composite composite) {
-        System.out.println(composite.getFullName());
+        shortString+= composite.getFullName()+ "\n";
     }
 
     @Override
     public void visit(Boat boat) {
-        System.out.println(boat.getFullName());
+        shortString += boat.getFullName()+ "\n";
     }
 
     @Override
     public void visit(Kite kite) {
-        System.out.println(kite.getFullName());
+        shortString += kite.getFullName()+ "\n";
     }
 
     @Override
     public void visit(Tree tree) {
-        System.out.println(tree.getFullName());
+        shortString += tree.getFullName()+ "\n";
+    }
+    public void printString(){
+        System.out.println("");
+        System.out.println(shortString);
     }
 }

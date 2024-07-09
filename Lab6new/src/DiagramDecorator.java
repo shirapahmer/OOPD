@@ -6,6 +6,6 @@ public class DiagramDecorator extends PaperDecorator {
         return super.write() + writeWithDiagramDecorator();
     }
     public String writeWithDiagramDecorator(){
-        return "Diagram";
+        return " Diagram";
     }
 }

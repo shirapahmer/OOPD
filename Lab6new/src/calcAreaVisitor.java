@@ -43,7 +43,7 @@ public class calcAreaVisitor implements ElementsVisitor{
         totalArea += (tree.length * tree.width)/2;
     }
 
-    public double getTotalArea(){
+    public int getTotalArea(){
         return (int) Math.round(totalArea);
     }
 }

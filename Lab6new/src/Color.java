@@ -1,9 +1,9 @@
  
 public enum Color {
-    Black,
-    Red,
-    Pink,
-    Brown,
-    LightBrown,
-    Blond
+    black,
+    red,
+    pink,
+    brown,
+    lightBrown,
+    blond
 }

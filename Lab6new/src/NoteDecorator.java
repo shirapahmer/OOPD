@@ -6,6 +6,6 @@ public class NoteDecorator extends PaperDecorator{
         return super.write() + writeWithNoteDecorator();
     }
     public String writeWithNoteDecorator(){
-        return "Note";
+        return " Note";
     }
 }

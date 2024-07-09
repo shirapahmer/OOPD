@@ -1,5 +1,3 @@
- 
-
 public class Flag extends Element {
 
     Color color;
